@@ -1,0 +1,7 @@
+.is-link {
+	transition: color 250ms cubic-bezier(.45,1,.32,1);
+	cursor: pointer;
+	@include on-event {
+		text-decoration: none;
+	}
+}

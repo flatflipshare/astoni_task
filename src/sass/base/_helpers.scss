@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+body.lock-body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.fade-image {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fade-image.loaded {
+  opacity: 1;
+}
+
+ul.reset,
+ul.reset li,
+ul.reset ul li {
+  @include reset-list;
+}
+
+.a-icon {
+  color: $brand-color;
+}
+
+.b-icon {
+  color: $white-color;
+}
+
+.hidden-1000-up {
+  @media (min-width: calc(map-get($breakpoints, 'md') + 1px)) {
+    display: none!important;
+  }
+}

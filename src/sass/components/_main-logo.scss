@@ -1,0 +1,20 @@
+.main-logo {
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	&__icon {
+		margin: 0 30px 0 0;
+		@media (max-width: map-get($breakpoints, 'md')) {
+			margin: 0 20px 0 0;
+		}
+	}
+
+	&__text {
+		@include merriweather-black;
+		@include font($brand-color, 36px, 1);
+		@media (max-width: map-get($breakpoints, 'md')) {
+			font-size: 24px;
+		}
+	}
+}

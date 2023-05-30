@@ -1,0 +1,21 @@
+.b-content {
+	position: relative;
+
+	&__heading {
+		max-width: 590px;
+		margin: 0;
+		@include merriweather-bold;
+		@include font($white-color, 48px, 1.22);
+		word-break: break-word;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			font-size: 32px;
+		}
+	}
+
+	&__btn-wrapper {
+		margin: 80px 0 0;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			margin: 60px 0 0;
+		}
+	}
+}

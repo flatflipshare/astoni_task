@@ -1,0 +1,19 @@
+.header-top-line {
+	display: flex;
+	align-items: center;
+	@media (max-width: map-get($breakpoints, 'md')) {
+		margin: 40px 0 0;
+	}
+	@media (max-width: map-get($breakpoints, 'sm')) {
+		display: block;
+	}
+
+	&__item {
+		& + #{&} {
+			margin-left: 40px;
+			@media (max-width: map-get($breakpoints, 'sm')) {
+				margin: 20px 0 0;
+			}
+		}
+	}
+}

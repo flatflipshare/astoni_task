@@ -1,0 +1,35 @@
+.header-nav {
+	position: relative;
+	margin: 22px 0 0;
+	@media (max-width: map-get($breakpoints, 'sm')) {
+		margin: 0;
+	}
+	&__list {
+		display: flex;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			display: block;
+		}
+	}
+
+	&__item {
+		font-size: 0;
+		& + #{&} {
+			margin-left: 68px;
+			@media (max-width: map-get($breakpoints, 'sm')) {
+				margin: 20px 0 0;
+			}
+		}
+	}
+
+	&__link {
+		@include lato-bold;
+		@include font($text-color, 14px, 1.21);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			display: inline-block;
+			font-size: 18px;
+			padding: 10px 10px 10px 0;
+		}
+	}
+}

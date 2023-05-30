@@ -1,0 +1,72 @@
+.is-button {
+	position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  touch-action: manipulation;
+  overflow: visible;
+  font-family: inherit;
+  text-align: center;
+  cursor:pointer;
+  transition: background-color .25s ease-out;
+  @include on-event {
+  	text-decoration: none;
+  }
+
+  &__text {
+  	@include font($text-color, 18px, 1);
+    transition: color .25s ease-out;
+  }
+}
+
+.is-button--primary {
+  height: 60px;
+  line-height: 60px;
+  background-color: $brand-color;
+  padding: 0 18px;
+  min-width: 270px;
+
+  @include on-event {
+    background-color: $white-color;
+    .is-button__text {
+      color: $brand-color;
+    }
+  }
+
+  .is-button__text {
+    color: $white-color;
+  }
+
+  @media (max-width: map-get($breakpoints, 'xs')) {
+    height: 50px;
+    line-height: 50px;
+    min-width: 240px;
+    .is-button__text {
+      font-size: 16px;
+    }
+  }
+  @media (hover: none) and (pointer: coarse) {
+    transition: transform 0.05s ease-in-out;
+    @include on-event {
+      background: $brand-color;
+      .is-button__text {
+        color: $white-color;
+      }
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.is-button--hamburger {
+  padding: 11px 7px;
+}

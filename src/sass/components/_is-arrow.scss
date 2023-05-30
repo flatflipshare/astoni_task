@@ -1,0 +1,22 @@
+.is-arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background: rgba($white-color, 0.2);
+	@media (max-width: map-get($breakpoints, 'xs')) {
+		width: 50px;
+		height: 50px;
+	}
+
+	&--next {
+		background: rgba($white-color, 0.4);
+	}
+
+	&--prev {
+		svg {
+			transform: scale(-1);
+		}
+	}
+}

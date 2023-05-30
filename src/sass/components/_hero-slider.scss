@@ -1,0 +1,63 @@
+.hero-slider {
+	position: relative;
+
+	.swiper-wrapper {
+		align-items: stretch;
+	}
+	
+	&__slide {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding: 170px 0 243px;
+		height: auto;
+	}
+
+	&__controls {
+		position: absolute;
+		z-index: 2;
+		left:0;
+		right:0;
+		bottom: 113px;
+		display: flex;
+		align-items: flex-end;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			flex-direction: column-reverse;
+			bottom: 0;
+		}
+	}
+
+	&__bullets {
+		font-size: 0;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			position: relative;
+			align-self: center;
+			margin: 40px 0 5px;
+		}
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			opacity: 1;
+			background: rgba($white-color, 0.4);
+			transition: background 0.3s;
+			@media (max-width: map-get($breakpoints, 'sm')) {
+				margin-bottom: 15px;
+			}
+		}
+		.swiper-pagination-bullet + .swiper-pagination-bullet {
+			margin-left: 40px;
+			@media (max-width: map-get($breakpoints, 'sm')) {
+				margin-left: 15px;
+			}
+		}
+		.swiper-pagination-bullet-active {
+			background: $white-color;
+		}
+	}
+
+	&__arrows {
+		margin-left: auto;
+		display: flex;
+		align-items: stretch;
+	}
+}

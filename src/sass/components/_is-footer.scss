@@ -1,0 +1,29 @@
+.is-footer {
+	padding: 44px 0 50px;
+	@include lato-light;
+	@include font($black-color, 14px, 1.42);
+	@media (max-width: map-get($breakpoints, 'sm')) {
+		padding: 40px 0;
+	}
+
+	&__container {
+		display: flex;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			display: block;
+		}
+	}	
+
+	&__left {
+		margin-right: 30px;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			margin: 0;
+		}
+	}
+
+	&__right {
+		margin-left: auto;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			margin: 15px 0 0;
+		}
+	}
+}

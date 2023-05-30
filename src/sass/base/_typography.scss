@@ -1,0 +1,40 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  background: #F9F9F9;
+  font: normal 16px / 24px $text-font-stack;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-style: normal;
+  font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: lining-nums;
+	-moz-font-feature-settings: 'lnum';
+	-webkit-font-feature-settings: 'lnum';
+	font-feature-settings: 'lnum' on;
+}
+
+.section-heading {
+  @include merriweather-black;
+  @include font($text-color, 48px, 0.98);
+  margin: 0 0 60px;
+  word-break: break-word;
+  @media (max-width: map-get($breakpoints, 'sm')) {
+    font-size: 32px;
+    margin: 0 0 40px;
+  }
+}
+
+.paragraph {
+  @include lato-light;
+  @include font($text-color, 18px, 1.22);
+  margin: 0;
+}
+
+.paragraph + .paragraph {
+  margin: 14px 0 0;
+}

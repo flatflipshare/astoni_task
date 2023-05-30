@@ -1,0 +1,30 @@
+.is-textarea {
+	touch-action: manipulation;
+	resize: none;
+	position: relative;
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 15px 15px 15px 0;
+  outline: none;
+  @include lato-light;
+  @include font($text-color, 21px, 1);
+  border: none; 
+  transition: border .2s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  caret-color: $text-color;
+  @media (max-width: map-get($breakpoints, 'xs')) {
+    font-size: 18px;
+  }
+}
+
+.is-textarea--theme {
+  border-bottom: 1px solid $white-color;
+  background: 0 0;
+  line-height: normal;
+  color: $white-color;
+  caret-color: $white-color;
+}

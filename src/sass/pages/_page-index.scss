@@ -1,0 +1,13 @@
+.page-index {
+	
+	&__hero {
+		margin: 0 0 3px;
+	}
+
+	&__contact-us {
+		padding: 122px 0 140px;
+		@media (max-width: map-get($breakpoints, 'xs')) {
+			padding: 100px 0;
+		}
+	}
+}

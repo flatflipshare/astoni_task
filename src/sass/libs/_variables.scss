@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Lato', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #222222 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #005FA3 !default;
+
+$black-color: #000 !default;
+
+$white-color: #fff !default;
+
+/// Error color
+/// @type Color
+$error: #ed1b34;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'xxs': 375px,
+  'xs': 480px,
+  'sm': 768px,
+  'md': 999px,
+) !default;
+
+/// Relative or absolute URL where all sources are served from
+$base-url: '/dist/' !default;

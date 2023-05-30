@@ -1,0 +1,54 @@
+.is-form {
+
+	&__row {
+		& + #{&} {
+			margin: 35px 0 0;
+			@media (max-width: map-get($breakpoints, 'sm')) {
+				margin: 30px 0 0;
+			}
+		}
+	}
+
+	&__btn-row {
+		margin: 50px 0 0;
+		display: flex;
+		justify-content: flex-end;
+		@media (max-width: map-get($breakpoints, 'xs')) {
+			margin: 40px 0 0;
+			justify-content: center;
+		}
+	}
+
+	&__field {
+		position: relative;
+		&.state-error {
+			.ff-error-parent {
+				opacity: 1;
+				visibility: visible;
+			}
+			.is-input, .is-textarea {
+				border-color: $error;
+			}
+		}
+	}
+
+	&__field-box {
+		position: relative;
+	}
+
+	&__label {
+		display: block;
+		@include font($white-color, 16px, 1);
+	}
+}
+
+.ff-error-parent {
+	position: absolute;
+	left: 0;
+  top: 100%;
+  @include font($error, 14px, 1);
+  padding: 5px 0 0;
+	opacity:0;
+	visibility: hidden;
+	transition:visibility 0.2s linear,opacity 0.2s linear;
+}

@@ -1,0 +1,37 @@
+.section-contact {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__heading {
+		color: $white-color;
+	}
+
+	&__desc {
+		color: $white-color;
+		max-width: 445px;
+	}
+
+	&__items {
+		margin: 80px 0 0;
+		display: flex;
+		align-items: center;
+		@media (max-width: 500px) {
+			display: block;
+		}
+	}
+
+	&__item {
+		color: $white-color;
+		& + #{&} {
+			margin-left: 40px;
+			@media (max-width: 500px) {
+				margin: 30px 0 0;
+			}
+		}
+	}
+
+	&__form {
+		padding-top: 13px;
+	}
+}

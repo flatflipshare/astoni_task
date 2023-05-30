@@ -1,0 +1,25 @@
+.global-layout {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.global-layout__content {
+  display: block;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.global-layout__footer {
+  display: block;
+  width: 100%;
+  flex-grow: 0;
+}

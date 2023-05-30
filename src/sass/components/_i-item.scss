@@ -1,0 +1,31 @@
+.i-item {
+	display: flex;
+	align-items: center;
+	color:$black-color;
+
+	&__icon {
+		margin:0 15px 0 0;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			min-width: 23px;
+		}
+	}
+
+	&__text {
+		@include font(currentColor, 13px, 1.38);
+		transition: color 0.3s ease;
+		white-space: nowrap;
+		@media (max-width: map-get($breakpoints, 'sm')) {
+			font-size: 16px;
+			padding: 10px 10px 10px 0;
+		}
+
+		&--md {
+			@include lato-light;
+			font-size: 21px;
+			padding: 0;
+			@media (max-width: map-get($breakpoints, 'xs')) {
+				font-size: 18px;
+			}
+		}
+	}
+}
